@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import { Lugar } from './../interfaces/lugar';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
+=======
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Lugar } from '../interfaces/lugar';
+>>>>>>> 74c619557f1a7709d4dc2112e8e50385e2ec108c
 
 @Component({
   selector: 'app-mapas',
@@ -15,31 +20,53 @@ export class MapasComponent implements OnInit {
 
 
   marcadores:google.maps.Marker[]=[];
+<<<<<<< HEAD
   infoWindows:google.maps.InfoWindow[]=[]
 
   lugares:Lugar[]=[{
     nombre:'Encebollados',
     lat:-0.096194,
+=======
+
+  lugares:Lugar[]=[{
+    nombre:'Encebollados',
+    lat:-0.096194, 
+>>>>>>> 74c619557f1a7709d4dc2112e8e50385e2ec108c
     lng:-78.451854
   },
 
   {
     nombre:'Iglesia',
+<<<<<<< HEAD
     lat:-0.096057,
+=======
+    lat:-0.096057, 
+>>>>>>> 74c619557f1a7709d4dc2112e8e50385e2ec108c
     lng:-78.452002
   },
 
   {
     nombre:'Policia',
+<<<<<<< HEAD
     lat:-0.096019,
+=======
+    lat:-0.096019, 
+>>>>>>> 74c619557f1a7709d4dc2112e8e50385e2ec108c
     lng:-78.452646
   },
   {
     nombre:'Casa Cristian',
+<<<<<<< HEAD
     lat:-0.096663,
     lng:-78.451900
   }
 
+=======
+    lat:-0.096663, 
+    lng:-78.451900
+  }
+  
+>>>>>>> 74c619557f1a7709d4dc2112e8e50385e2ec108c
 
 ]
 
@@ -61,6 +88,7 @@ export class MapasComponent implements OnInit {
 
   this.map=new google.maps.Map(this.mapaElement.nativeElement,mapaOpciones);
 
+<<<<<<< HEAD
   this.map.addListener('click',(cors)=>{
     const nuevoMarcador:Lugar={
       nombre:'Nuevo Lugar',
@@ -71,6 +99,9 @@ export class MapasComponent implements OnInit {
 
     this.agregarMarcador(nuevoMarcador)
   })
+=======
+
+>>>>>>> 74c619557f1a7709d4dc2112e8e50385e2ec108c
 
   for(const lugar of this.lugares){
     this.agregarMarcador(lugar)
@@ -93,6 +124,7 @@ agregarMarcador(marcador:Lugar){
   })
 
   this.marcadores.push(marker)
+<<<<<<< HEAD
 
   const contenido=`<b>${marcador.nombre}</b>`
 
@@ -122,6 +154,8 @@ agregarMarcador(marcador:Lugar){
     console.log(nuevoMarcador)
   })
 
+=======
+>>>>>>> 74c619557f1a7709d4dc2112e8e50385e2ec108c
 }
 
 }
